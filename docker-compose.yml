@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api-service:
+    image: ${DOCKER_REGISTRY-}api-service
+    build:
+      context: ./api-service
+      dockerfile: Dockerfile
+    ports:
+      - "7000:80"
+
+  worker-service:
+    image: ${DOCKER_REGISTRY-}worker-service
+    build:
+      context: ./worker-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
