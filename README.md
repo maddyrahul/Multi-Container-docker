@@ -39,10 +39,10 @@ Ensure the following tools are installed before proceeding:
 
 ## Setup and Installation
 
-## Clone the Repository
+# Clone the Repository
 
-git clone https://github.com/maddyrahul/Multi-Container-docker.git
-cd Docker
+- git clone https://github.com/maddyrahul/Multi-Container-docker.git
+- cd Docker
 
 ## Creating Dockerfiles
 Dockerfile for api-service
