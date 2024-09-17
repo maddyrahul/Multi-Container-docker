@@ -99,17 +99,14 @@ docker run -d -p 7000:80 api-service:latest
 docker run -d -p 8000:80 worker-service:latest
 ```
 
-```
+
 ## Access the services at:
+
 ```
 http://localhost:7000 for api-service
 ```
-
+```
 http://localhost:8000 for worker-service
-
-```
-```
-
 ```
 ## Using Docker Compose
 # Create docker-compose.yml
