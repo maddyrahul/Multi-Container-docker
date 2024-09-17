@@ -78,13 +78,14 @@ ENTRYPOINT ["dotnet", "api-service.dll"]
 
 ## Building Docker Images
 # Build Docker Image for api-service
-
+```
 cd api-service
 docker build -t api-service:latest .
 Build Docker Image for worker-service
 
 cd ../worker-service
 docker build -t worker-service:latest .
+````
 
 ---
 # Running Containers Locally
@@ -105,6 +106,7 @@ http://localhost:8000 for worker-service
 # Create docker-compose.yml
 
 In the project root directory:
+```
 version: '3.8'
 
 services:
@@ -124,15 +126,15 @@ services:
     ports:
       - "8000:80"
 
-
+```
 ## Build and Bring Up the Application
 docker-compose up --build
 
 # The services will be accessible at:
-
+```
 http://localhost:7000 for api-service
 http://localhost:8000 for worker-service
-
+```
 # Stopping the Services
 docker-compose down
 
@@ -144,13 +146,16 @@ Tag and Push Images
 
 
 ## For api-service:
-
+```
 docker tag api-service:latest rahulmaddy123/api-service:latest
 docker push rahulmaddy123/api-service:latest
+```
 
 # For worker-service:
+```
 docker tag worker-service:latest rahulmaddy123/worker-service:latest
 docker push rahulmaddy123/worker-service:latest
+```
 
 
 ## Pulling and Running Images from Docker Hub
