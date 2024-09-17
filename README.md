@@ -112,7 +112,7 @@ http://localhost:8000 for worker-service
 # Create docker-compose.yml
 
 In the project root directory:
-```
+```dockerfile
 version: '3.8'
 
 services:
