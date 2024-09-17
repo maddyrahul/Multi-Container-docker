@@ -39,7 +39,7 @@ Ensure the following tools are installed before proceeding:
 
 ## Setup and Installation
 
-### Clone the Repository
+## Clone the Repository
 ---
 git clone https://github.com/maddyrahul/Multi-Container-docker.git
 ---
@@ -49,8 +49,9 @@ cd Docker
 Dockerfile for api-service
 ---
 In the api-service/ directory:
-
+---
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+---
 WORKDIR /app
 EXPOSE 80
 
