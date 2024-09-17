@@ -46,6 +46,7 @@ cd Multi-Container-docker
 ---
 ## Creating Dockerfiles
 Dockerfile for api-service
+---
 In the api-service/ directory:
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
