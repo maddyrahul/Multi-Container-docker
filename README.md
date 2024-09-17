@@ -40,12 +40,10 @@ Ensure the following tools are installed before proceeding:
 ## Setup and Installation
 
 ### Clone the Repository
-
-```bash
+---
 git clone https://github.com/maddyrahul/Multi-Container-docker.git
 cd Multi-Container-docker
-
-
+---
 ## Creating Dockerfiles
 Dockerfile for api-service
 In the api-service/ directory:
@@ -72,6 +70,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "api-service.dll"]
 
+--- 
 ## Dockerfile for worker-service
 In the worker-service/ directory:
 
@@ -97,6 +96,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "worker-service.dll"]
 
+---
 ## Building Docker Images
 # Build Docker Image for api-service
 
@@ -107,18 +107,21 @@ Build Docker Image for worker-service
 cd ../worker-service
 docker build -t worker-service:latest .
 
-Running Containers Locally
-Run Container for api-service
+---
+# Running Containers Locally
 
+# Run Container for api-service
 docker run -d -p 7000:80 api-service:latest
-Run Container for worker-service
 
+# Run Container for worker-service
 docker run -d -p 8000:80 worker-service:latest
-## Access the services at:
 
+---
+## Access the services at:
 http://localhost:7000 for api-service
 http://localhost:8000 for worker-service
 
+---
 ## Using Docker Compose
 # Create docker-compose.yml
 
@@ -141,7 +144,8 @@ services:
       dockerfile: worker-service/Dockerfile
     ports:
       - "8000:80"
-
+      
+---
 
 ## Build and Bring Up the Application
 docker-compose up --build
@@ -160,15 +164,18 @@ docker-compose down
 docker login
 Tag and Push Images
 
+---
 ## For api-service:
 
 docker tag api-service:latest rahulmaddy123/api-service:latest
 docker push rahulmaddy123/api-service:latest
 
+---
 # For worker-service:
 docker tag worker-service:latest rahulmaddy123/worker-service:latest
 docker push rahulmaddy123/worker-service:latest
 
+---
 ## Pulling and Running Images from Docker Hub
 # Pull Images
 For api-service:
