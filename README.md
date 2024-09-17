@@ -35,16 +35,15 @@ Ensure the following tools are installed before proceeding:
 - **GitHub Account**: For repository and project management
 - **Docker Hub Account**: For image storage and management
 
----
+
 
 ## Setup and Installation
 
 ## Clone the Repository
----
+
 git clone https://github.com/maddyrahul/Multi-Container-docker.git
----
 cd Docker
----
+
 ## Creating Dockerfiles
 Dockerfile for api-service
 ---
