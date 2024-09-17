@@ -1,30 +1,50 @@
-## Multi-Container .NET Web Application
-This project demonstrates how to create, containerize, and manage a multi-container .NET web application
-using Docker and Docker Compose. The application includes two services: api-service and worker-service. 
-This README file provides a complete guide for setting up, running, and managing the application, 
-as well as instructions for pushing and pulling Docker images.
+# Multi-Container .NET Web Application
+
+This project demonstrates how to create, containerize, and manage a multi-container .NET web application using Docker and Docker Compose. The application includes two services:
+
+- **api-service**
+- **worker-service**
+
+This README file provides a complete guide for setting up, running, and managing the application, as well as instructions for pushing and pulling Docker images.
+
+---
 
 ## Table of Contents
-1.Prerequisites
-2.Setup and Installation
-3.Creating Dockerfiles
-4.Building Docker Images
-5.Running Containers Locally
-6.Using Docker Compose
-7.Pushing Images to Docker Hub
-8.Pulling and Running Images from Docker Hub
+
+1. [Prerequisites](#prerequisites)
+2. [Setup and Installation](#setup-and-installation)
+3. [Creating Dockerfiles](#creating-dockerfiles)
+   - [Dockerfile for api-service](#dockerfile-for-api-service)
+   - [Dockerfile for worker-service](#dockerfile-for-worker-service)
+4. [Building Docker Images](#building-docker-images)
+5. [Running Containers Locally](#running-containers-locally)
+6. [Using Docker Compose](#using-docker-compose)
+7. [Pushing Images to Docker Hub](#pushing-images-to-docker-hub)
+8. [Pulling and Running Images from Docker Hub](#pulling-and-running-images-from-docker-hub)
+
+---
 
 ## Prerequisites
-Docker: Version 20.10 or later
-Docker Compose: Version 1.29 or later
-.NET SDK: Version 6.0 or later
-Git: For version control
-GitHub Account: For repository and project management
+
+Ensure the following tools are installed before proceeding:
+
+- **Docker**: Version 20.10 or later
+- **Docker Compose**: Version 1.29 or later
+- **.NET SDK**: Version 6.0 or later
+- **Git**: For version control
+- **GitHub Account**: For repository and project management
+- **Docker Hub Account**: For image storage and management
+
+---
 
 ## Setup and Installation
-## Clone the Repository
+
+### Clone the Repository
+
+```bash
 git clone https://github.com/maddyrahul/Multi-Container-docker.git
-cd Docker
+cd Multi-Container-docker
+
 
 ## Creating Dockerfiles
 Dockerfile for api-service
