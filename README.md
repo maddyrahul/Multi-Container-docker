@@ -168,7 +168,11 @@ docker pull rahulmaddy123/worker-service:latest
 
 # Run Containers
 For api-service:
+```
 docker run -d -p 7000:80 rahulmaddy123/api-service:latest
+```
 
 For worker-service:
+```
 docker run -d -p 8000:80 rahulmaddy123/worker-service:latest
+```
