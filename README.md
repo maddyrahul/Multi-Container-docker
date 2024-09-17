@@ -36,13 +36,13 @@ Ensure the following tools are installed before proceeding:
 - **Docker Hub Account**: For image storage and management
 
 
-```
+
 ## Setup and Installation
 
 # Clone the Repository
-
-- git clone https://github.com/maddyrahul/Multi-Container-docker.git
-- cd Docker
+```
+git clone https://github.com/maddyrahul/Multi-Container-docker.git
+cd Docker
 ```
 ## Creating Dockerfiles
 
@@ -91,15 +91,20 @@ docker build -t worker-service:latest .
 # Running Containers Locally
 
 # Run Container for api-service
+```
 docker run -d -p 7000:80 api-service:latest
-
+```
 # Run Container for worker-service
+```
 docker run -d -p 8000:80 worker-service:latest
+```
 
 ```
 ## Access the services at:
+```
 http://localhost:7000 for api-service
 http://localhost:8000 for worker-service
+```
 
 ```
 ## Using Docker Compose
@@ -161,10 +166,14 @@ docker push rahulmaddy123/worker-service:latest
 ## Pulling and Running Images from Docker Hub
 # Pull Images
 For api-service:
+```
 docker pull rahulmaddy123/api-service:latest
+```
 
 For worker-service:
+```
 docker pull rahulmaddy123/worker-service:latest
+```
 
 # Run Containers
 For api-service:
