@@ -44,13 +44,12 @@ Ensure the following tools are installed before proceeding:
 - git clone https://github.com/maddyrahul/Multi-Container-docker.git
 - cd Docker
 
-## Creating Dockerfiles
-Dockerfile for api-service
----
-In the api-service/ directory:
----
+# Creating Dockerfiles
+  Dockerfile for api-service
+  
+# In the api-service/ directory:
+
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
----
 WORKDIR /app
 EXPOSE 80
 
@@ -72,7 +71,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "api-service.dll"]
 
---- 
+
 ## Dockerfile for worker-service
 In the worker-service/ directory:
 
@@ -98,7 +97,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "worker-service.dll"]
 
----
+
 ## Building Docker Images
 # Build Docker Image for api-service
 
@@ -146,8 +145,7 @@ services:
       dockerfile: worker-service/Dockerfile
     ports:
       - "8000:80"
-      
----
+
 
 ## Build and Bring Up the Application
 docker-compose up --build
@@ -166,18 +164,17 @@ docker-compose down
 docker login
 Tag and Push Images
 
----
+
 ## For api-service:
 
 docker tag api-service:latest rahulmaddy123/api-service:latest
 docker push rahulmaddy123/api-service:latest
 
----
 # For worker-service:
 docker tag worker-service:latest rahulmaddy123/worker-service:latest
 docker push rahulmaddy123/worker-service:latest
 
----
+
 ## Pulling and Running Images from Docker Hub
 # Pull Images
 For api-service:
